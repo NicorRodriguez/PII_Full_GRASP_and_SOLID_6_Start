@@ -8,6 +8,14 @@ namespace Full_GRASP_And_SOLID
         void TimeOut();
     }
 
+    public class MyTimerClient: TimerClient
+    {
+        void TimerClient.TimeOut()
+        {
+            Thread.Sleep(1000);
+        }
+    }
+
     public class CountdownTimer
     {
         private TimerClient client;
