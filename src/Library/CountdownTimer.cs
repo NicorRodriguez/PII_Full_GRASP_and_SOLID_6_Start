@@ -10,9 +10,14 @@ namespace Full_GRASP_And_SOLID
 
     public class MyTimerClient: TimerClient
     {
+        Recipe recipe;
+        public MyTimerClient(Recipe myRecipe)
+        {
+            this.recipe = myRecipe;
+        }
         void TimerClient.TimeOut()
         {
-            Thread.Sleep(1000);
+            recipe.Cook();
         }
     }
 

@@ -32,9 +32,6 @@ namespace Full_GRASP_And_SOLID
         }
 
         public void Cook(){
-            TimerClient myTimerClient = new MyTimerClient();
-            CountdownTimer myTimer = new CountdownTimer();
-            myTimer.Register(this.GetCookTime(), myTimerClient);
             this.cooked = true;
         }
 

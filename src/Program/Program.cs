@@ -33,6 +33,10 @@ namespace Full_GRASP_And_SOLID
             printer = new FilePrinter();
             printer.PrintRecipe(recipe);
 
+            TimerClient myTimerClient = new MyTimerClient(recipe);
+            CountdownTimer myTimer = new CountdownTimer();
+            myTimer.Register(recipe.GetCookTime(), myTimerClient);
+
             Console.WriteLine($"Cooked: {recipe.Cooked}");
             recipe.Cook();
             Thread.Sleep(500); // 0.5 segundos
